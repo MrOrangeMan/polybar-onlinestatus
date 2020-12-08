@@ -45,14 +45,6 @@ class OnlineStatus:
             except URLError:
                 return False
 
-    @property
-    def ping_url(self):
-        return self.url
-
-    @ping_url.setter
-    def ping_url(self, new_url):
-        self.url = new_url
-
     def online_result(self):
         if self.boolean_mode is True:
             if self.color_mode is True:
