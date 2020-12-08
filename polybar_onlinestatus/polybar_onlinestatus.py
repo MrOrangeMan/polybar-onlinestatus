@@ -23,7 +23,7 @@ class OnlineStatus:
         self.cache_timeout = self.args.cache_timeout if self.args.cache_timeout is not None else 5
         self.timeout = self.args.url_timeout if self.args.url_timeout is not None else 2
         self.url = self.args.url if self.args.url is not None else "https://google.com"
-        if self.args.boolean_mode:
+
         if self.args.offline_color and search("^#(?:[0-9a-fA-F]{3}){1,2}$", self.args.offline_color):
             self.color["offline"] = f"%{{F{self.args.offline_color}}}"
         else:
@@ -34,6 +34,7 @@ class OnlineStatus:
         else:
             self.color["online"] = "%{F#0f0}"
 
+        self.boolean_mode = True if self.args.boolean_mode else False
     def check_online(self):
 
         from urllib.request import urlopen
