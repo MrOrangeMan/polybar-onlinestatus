@@ -9,5 +9,10 @@ And use module below.
 [module/onlinestatus]
 type = custom/script
 exec = polybar-onlinestatus
-interval = 10
+tail = true
 ```
+
+
+#TO-DO:
+- Add space after icon
+- Add while loop with delay due to "tail = true"
