@@ -28,13 +28,15 @@ class OnlineStatus:
             self.color["offline"] = f"%{{F{self.args.offline_color}}}"
         else:
             self.color["offline"] = "%{F#f00}"
-        if self.args.color_mode:
+
         if self.args.online_color and search("^#(?:[0-9a-fA-F]{3}){1,2}$", self.args.online_color):
             self.color["online"] = f"%{{F{self.args.online_color}}}"
         else:
             self.color["online"] = "%{F#0f0}"
 
         self.boolean_mode = True if self.args.boolean_mode else False
+        self.color_mode = True if self.args.color_mode else False
+
     def check_online(self):
 
         from urllib.request import urlopen
