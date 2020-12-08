@@ -66,9 +66,9 @@ class OnlineStatus:
 
 def main():
     while True:
+        print(OnlineStatus().online_result())
         sleep(OnlineStatus().cache_timeout)
-        return OnlineStatus().online_result()
 
 
-# print(main())  # For testing purposes
+# main()  # Called for testing purposes, comment it out when building dist
 
