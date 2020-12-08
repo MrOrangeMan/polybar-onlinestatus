@@ -11,7 +11,7 @@ class OnlineStatus:
         self.color = {
             "end": "%{F-}",
             "offline": "%{F#f00}",
-            "online": "%F{#080}"
+            "online": "%{F#080}"
         }
         self.parser.add_argument("-bm", "--boolean-mode", dest="boolean_mode", help="Returns boolean value if True, network icon if False", action="store_true")
         self.parser.add_argument("-cm", "--color-mode", dest="color_mode", help="Sets color to result if True", action="store_true")
