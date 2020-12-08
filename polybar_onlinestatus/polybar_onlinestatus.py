@@ -27,12 +27,12 @@ class OnlineStatus:
         if self.args.offline_color and search("^#(?:[0-9a-fA-F]{3}){1,2}$", self.args.offline_color):
             self.color["offline"] = f"%{{F{self.args.offline_color}}}"
         else:
-            self.boolean_mode = False
+            self.color["offline"] = "%{F#f00}"
         if self.args.color_mode:
         if self.args.online_color and search("^#(?:[0-9a-fA-F]{3}){1,2}$", self.args.online_color):
             self.color["online"] = f"%{{F{self.args.online_color}}}"
         else:
-            self.color_mode = False
+            self.color["online"] = "%{F#0f0}"
 
     def check_online(self):
 
