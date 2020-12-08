@@ -20,4 +20,4 @@ You can use any font you want, but make sure icon is big enough. I recommend Ner
 
 For more options use ```polybar-onlinestatus --help``` in your terminal and assign options in ```exec = polybar-onlinestatus``` line.
 
-Icon used by default is ``, if you are unable to see it - you need to install nerd font from nerdfonts.com 
+Icon used by default is ``, if you are unable to see it - install nerd font from nerdfonts.com, replace it with your own or use --boolean-mode.
