@@ -16,7 +16,10 @@ class OnlineStatus:
         self.parser.add_argument("-ut", "--url-timeout", type=int, metavar="TIMEOUT", dest="url_timeout", help="Specify URL ping timeout in seconds, defaults to 2")
         self.parser.add_argument("-l", "--link", "--url", type=str, metavar="URL", dest="url", help="Specify URL that will be used to verify connection, defaults to 'https://google.com'")
         self.parser.add_argument("--offline-color", type=str, metavar="'#RRGGBB'", dest="offline_color", help="Specify HEX color code for offline icon or text, defaults to '#f00' (red)")
+        self.parser.add_argument("--online-color", type=str, metavar="'#RRGGBB'", dest="online_color", help="Specify HEX color code for online icon or text, defaults to '#0f0' (green)")
+
         self.args = self.parser.parse_args()
+
         self.cache_timeout = self.args.cache_timeout if self.args.cache_timeout is not None else 5
         self.timeout = self.args.url_timeout if self.args.url_timeout is not None else 2
         self.url = self.args.url if self.args.url is not None else "https://google.com"
