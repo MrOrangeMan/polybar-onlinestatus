@@ -10,7 +10,8 @@ And use module below:
 type = custom/script
 exec = polybar-onlinestatus
 tail = true
-label = %{T4}%output% %{T-}
+label = %{T4} %output% %{T-}
+format-underline = #07BDEE
 ```
 
 ```font-3 = Hack Nerd Font:style=Bold:size=12```
