@@ -24,7 +24,8 @@ class OnlineStatus:
         self.timeout = self.args.url_timeout if self.args.url_timeout is not None else 2
         self.url = self.args.url if self.args.url is not None else "https://google.com"
         if self.args.boolean_mode:
-            self.boolean_mode = True
+        if self.args.offline_color and search("^#(?:[0-9a-fA-F]{3}){1,2}$", self.args.offline_color):
+            self.color["offline"] = f"%{{F{self.args.offline_color}}}"
         else:
             self.boolean_mode = False
         if self.args.color_mode:
