@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 from time import sleep
+from re import search
 
 
 class OnlineStatus:
