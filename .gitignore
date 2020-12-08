@@ -3,3 +3,7 @@
 
 dist/
 build/
+
+polybar_onlinestatus.egg-info/
+
+polybar_onlinestatus/__pycache__/
