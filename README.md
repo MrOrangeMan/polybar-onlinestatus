@@ -11,8 +11,3 @@ type = custom/script
 exec = polybar-onlinestatus
 tail = true
 ```
-
-
-#TO-DO:
-- Add space after icon
-- Add while loop with delay due to "tail = true"
