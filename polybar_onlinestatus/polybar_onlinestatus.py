@@ -59,15 +59,15 @@ class OnlineStatus:
     def online_result(self):
         if self.boolean_mode is True:
             if self.color_mode is True:
-                return f"{self.color['online'] if self.check_online() else self.color['offline']}{self.check_online()}"
+                return f"{self.color['online'] if self.check_online() else self.color['offline']}{self.check_online()}{self.color['end']}"
             else:
                 return self.check_online()
         else:
             if self.color_mode is True:
                 if self.check_online():
-                    return f"{self.color['online']}{self.online_icon}{self.color['reset']}"
+                    return f"{self.color['online']}{self.online_icon}{self.color['end']}"
                 else:
-                    return f"{self.color['offline']}{self.offline_icon}{self.color['reset']}"
+                    return f"{self.color['offline']}{self.offline_icon}{self.color['end']}"
             else:
                 if self.check_online():
                     return f"{self.online_icon}"
