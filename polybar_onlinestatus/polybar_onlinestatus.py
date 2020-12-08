@@ -76,7 +76,7 @@ class OnlineStatus:
 
 def main():
     while True:
-        print(OnlineStatus().online_result())
+        print(OnlineStatus().online_result(), flush=True)
         sleep(OnlineStatus().cache_timeout)
 
 
