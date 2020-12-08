@@ -13,8 +13,8 @@ class OnlineStatus:
             "offline": "\u001b[31m",
             "online": "\u001b[32m"
         }
-        self.parser.add_argument("--boolean-mode", dest="boolean_mode", help="Returns boolean value if True, network icon if False", action="store_true")
-        self.parser.add_argument("--color-mode", dest="color_mode", help="Sets color to result if True", action="store_true")
+        self.parser.add_argument("-bm", "--boolean-mode", dest="boolean_mode", help="Returns boolean value if True, network icon if False", action="store_true")
+        self.parser.add_argument("-cm", "--color-mode", dest="color_mode", help="Sets color to result if True", action="store_true")
         self.parser.add_argument("-ct", "--cache-timeout", type=int, metavar="REFRESH_RATE", dest="cache_timeout", help="Specify cache refresh rate in seconds, defaults to 5")
         self.parser.add_argument("-ut", "--url-timeout", type=int, metavar="TIMEOUT", dest="url_timeout", help="Specify URL ping timeout in seconds, defaults to 2")
         self.parser.add_argument("-l", "--link", "--url", type=str, metavar="URL", dest="url", help="Specify URL that will be used to verify connection, defaults to 'https://google.com'")
