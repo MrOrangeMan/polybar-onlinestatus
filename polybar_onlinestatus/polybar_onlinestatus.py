@@ -6,8 +6,8 @@ from time import sleep
 class OnlineStatus:
     def __init__(self):
         self.parser = argparse.ArgumentParser()
-        self.offline_icon = ""
-        self.online_icon = ""
+        self.offline_icon = "  "
+        self.online_icon = "  "
         self.color = {
             "reset": "\u001b[0m",
             "offline": "\u001b[31m",
