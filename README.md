@@ -1,4 +1,10 @@
 # polybar-onlinestatus
+<p align="center">
+    <a href="https://badge.fury.io/py/polybar-onlinestatus"><img src="https://badge.fury.io/py/polybar-onlinestatus.svg" alt="PyPI version" height="18"></a>
+    <a href="https://www.python.org/dev/peps/pep-0008/"><img title="PEP8" src="https://img.shields.io/badge/code%20style-pep8-blue.svg"></a>
+    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/polybar-onlinestatus">
+</p>
+
 polybar module that checks if you are online
 
 To install use `pip install polybar-onlinestatus`
