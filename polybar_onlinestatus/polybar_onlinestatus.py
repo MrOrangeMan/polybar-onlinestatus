@@ -32,9 +32,10 @@ class OnlineStatus:
             self.color_mode = False
 
     def check_online(self):
+
         from urllib.request import urlopen
         from urllib.error import URLError
-        from subprocess import call
+        from subprocess import call, DEVNULL
         if "://" in self.url:
             try:
                 urlopen(self.url, timeout=self.timeout)
@@ -43,7 +44,7 @@ class OnlineStatus:
                 return False
         else:
             try:
-                return call(['ping', '-c', '1', self.url]) == 0
+                return call(['ping', '-c', '1', '-W', f'{self.timeout}', f'{self.url}'], stdout=DEVNULL, stderr=DEVNULL) == 0
             except URLError:
                 return False
 
