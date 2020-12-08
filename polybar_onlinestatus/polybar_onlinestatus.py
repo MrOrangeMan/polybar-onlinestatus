@@ -9,9 +9,9 @@ class OnlineStatus:
         self.offline_icon = "  "
         self.online_icon = "  "
         self.color = {
-            "reset": "\u001b[0m",
-            "offline": "\u001b[31m",
-            "online": "\u001b[32m"
+            "end": "%{F-}",
+            "offline": "%{F#ff0000}",
+            "online": "%F{#008000}"
         }
         self.parser.add_argument("-bm", "--boolean-mode", dest="boolean_mode", help="Returns boolean value if True, network icon if False", action="store_true")
         self.parser.add_argument("-cm", "--color-mode", dest="color_mode", help="Sets color to result if True", action="store_true")
