@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+from time import sleep
 
 
 class OnlineStatus:
@@ -74,7 +75,9 @@ class OnlineStatus:
 
 
 def main():
-    return OnlineStatus().online_result()
+    while True:
+        sleep(OnlineStatus().cache_timeout)
+        return OnlineStatus().online_result()
 
 
 # print(main()) # For testing purposes
